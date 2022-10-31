@@ -1,6 +1,5 @@
 # Gangadia_Mahek_002797094_Assignment2
 
-Discription
 This application is a platform for people to find medical resource in different city and 
 community.  
 The Patient has his own login as well as the other admins along with the Doctor.
