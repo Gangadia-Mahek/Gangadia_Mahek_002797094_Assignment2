@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -68,6 +71,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         submitButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         submitButton.setText("SUBMIT");
+        submitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitButtonActionPerformed(evt);
+            }
+        });
 
         clearButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         clearButton.setText("CLEAR");
@@ -142,6 +150,11 @@ public class MainFrame extends javax.swing.JFrame {
                 regButtonMouseClicked(evt);
             }
         });
+        regButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -193,6 +206,40 @@ public class MainFrame extends javax.swing.JFrame {
     private void PasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PasswordFieldActionPerformed
+
+    private void regButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regButtonActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        RegFrame regFrame= new RegFrame();
+        regFrame.setVisible(true);
+    }//GEN-LAST:event_regButtonActionPerformed
+
+    private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
+        // TODO add your handling code here:
+        String username = usernameTF.getText();
+        String password = PasswordField.getText();
+        Integer type = userTypeComboBox.getSelectedIndex();
+        
+        if( username.equals("System Admin") && password.equals("test123") && type.equals(1)){
+            SystemAdminFrame system = new SystemAdminFrame();
+            system.setVisible(true);
+            
+        }else if( username.equals("Hospital Admin") && password.equals("test123") && type.equals(2)){
+            HospitalAdminFrame hospital = new HospitalAdminFrame();
+            hospital.setVisible(true);
+            
+        }else if( username.equals("Community Admin") && password.equals("test123") && type.equals(3)){
+            CommunityAdminFrame community = new CommunityAdminFrame();
+            community.setVisible(true);
+            
+        }else if( username.equals("Doctor") && password.equals("test123") && type.equals(4)){
+            DoctorFrame doctor = new DoctorFrame();
+            doctor.setVisible(true);
+            
+        }else{
+            JOptionPane.showMessageDialog(this, "Incorrect credential");
+        }
+    }//GEN-LAST:event_submitButtonActionPerformed
 
     /**
      * @param args the command line arguments

@@ -1,3 +1,6 @@
+
+import java.text.SimpleDateFormat;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -25,25 +28,43 @@ public class RegFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        jLabel6 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         regLabel = new javax.swing.JLabel();
+        nameTF = new javax.swing.JTextField();
         nameLable = new javax.swing.JLabel();
         DoBLabel = new javax.swing.JLabel();
-        emailLabel = new javax.swing.JLabel();
-        contactLabel = new javax.swing.JLabel();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        contactTF = new javax.swing.JTextField();
+        emailTF = new javax.swing.JTextField();
         genderLabel = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        contactLabel = new javax.swing.JLabel();
+        emailLabel = new javax.swing.JLabel();
         userNameLabel = new javax.swing.JLabel();
+        usernameTF = new javax.swing.JTextField();
+        PasswordField = new javax.swing.JPasswordField();
+        confirmPasswordField = new javax.swing.JPasswordField();
         createPasswordLabel = new javax.swing.JLabel();
         ConfirmPasswordLabel = new javax.swing.JLabel();
+        clearButton = new javax.swing.JButton();
         submitButton = new javax.swing.JButton();
-        confirmPasswordField = new javax.swing.JPasswordField();
-        PasswordField = new javax.swing.JPasswordField();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        maleRadioButton = new javax.swing.JRadioButton();
+        femaleRadioButton = new javax.swing.JRadioButton();
+        backButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel6.setToolTipText("");
+
+        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
+
         regLabel.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         regLabel.setText("REGISTRATION FORM");
+
+        nameTF.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         nameLable.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         nameLable.setText("Name");
@@ -51,31 +72,28 @@ public class RegFrame extends javax.swing.JFrame {
         DoBLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         DoBLabel.setText("Date of Birth");
 
-        emailLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        emailLabel.setText("Email ID");
+        contactTF.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
-        contactLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        contactLabel.setText("Contact No.");
+        emailTF.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         genderLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         genderLabel.setText("Gender");
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel6.setToolTipText("");
+        contactLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        contactLabel.setText("Contact No.");
+
+        emailLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        emailLabel.setText("Email ID");
 
         userNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         userNameLabel.setText("Create Username");
 
-        createPasswordLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        createPasswordLabel.setText("Create Password");
-
-        ConfirmPasswordLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        ConfirmPasswordLabel.setText("Confirm Password");
-
-        submitButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        submitButton.setText("Submit");
-
-        confirmPasswordField.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        usernameTF.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        usernameTF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usernameTFActionPerformed(evt);
+            }
+        });
 
         PasswordField.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         PasswordField.addActionListener(new java.awt.event.ActionListener() {
@@ -84,84 +102,162 @@ public class RegFrame extends javax.swing.JFrame {
             }
         });
 
+        confirmPasswordField.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+
+        createPasswordLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        createPasswordLabel.setText("Create Password");
+
+        ConfirmPasswordLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        ConfirmPasswordLabel.setText("Confirm Password");
+
+        clearButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        clearButton.setText("Clear");
+        clearButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearButtonActionPerformed(evt);
+            }
+        });
+
+        submitButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        submitButton.setText("Submit");
+        submitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitButtonActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(maleRadioButton);
+        maleRadioButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        maleRadioButton.setText("Male");
+        maleRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                maleRadioButtonActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(femaleRadioButton);
+        femaleRadioButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        femaleRadioButton.setText("Female");
+
+        backButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        backButton.setText("Back");
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(67, 67, 67)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(submitButton)
+                                .addGap(181, 181, 181)
+                                .addComponent(clearButton))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(128, 128, 128)
+                                .addComponent(regLabel)))
+                        .addContainerGap(252, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(nameLable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(237, 237, 237))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(DoBLabel)
+                                    .addComponent(genderLabel)
+                                    .addComponent(contactLabel)
+                                    .addComponent(emailLabel)
+                                    .addComponent(userNameLabel)
+                                    .addComponent(createPasswordLabel)
+                                    .addComponent(ConfirmPasswordLabel))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(maleRadioButton)
+                                .addGap(28, 28, 28)
+                                .addComponent(femaleRadioButton))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(backButton)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
+                                    .addComponent(confirmPasswordField)
+                                    .addComponent(PasswordField)
+                                    .addComponent(usernameTF)
+                                    .addComponent(contactTF)
+                                    .addComponent(nameTF)
+                                    .addComponent(emailTF))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(regLabel)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nameLable))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(DoBLabel)
+                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(genderLabel)
+                    .addComponent(maleRadioButton)
+                    .addComponent(femaleRadioButton))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(contactTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(contactLabel))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(emailTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(emailLabel))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(userNameLabel)
+                    .addComponent(usernameTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(createPasswordLabel))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(confirmPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ConfirmPasswordLabel))
+                .addGap(55, 55, 55)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(submitButton)
+                    .addComponent(clearButton)
+                    .addComponent(backButton))
+                .addContainerGap(148, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(279, 279, 279)
-                        .addComponent(regLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(427, 427, 427)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(confirmPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(submitButton)
-                            .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(102, 102, 102)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(userNameLabel)
-                            .addComponent(ConfirmPasswordLabel))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(genderLabel)
-                                    .addComponent(contactLabel)
-                                    .addComponent(emailLabel)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(nameLable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(DoBLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 215, Short.MAX_VALUE)
-                                .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(createPasswordLabel))
-                        .addGap(678, 678, 678))))
+                .addGap(110, 110, 110)
+                .addComponent(jLabel6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(regLabel)
-                .addGap(56, 56, 56)
-                .addComponent(nameLable)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(DoBLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addComponent(genderLabel)
-                .addGap(18, 18, 18)
-                .addComponent(contactLabel)
-                .addGap(18, 18, 18)
-                .addComponent(emailLabel)
-                .addGap(18, 18, 18)
-                .addComponent(userNameLabel)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(createPasswordLabel)
-                    .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(ConfirmPasswordLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(confirmPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
-                .addComponent(submitButton)
-                .addGap(66, 66, 66))
+                .addComponent(jLabel6))
         );
 
         pack();
@@ -170,6 +266,50 @@ public class RegFrame extends javax.swing.JFrame {
     private void PasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PasswordFieldActionPerformed
+
+    private void usernameTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameTFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usernameTFActionPerformed
+
+    private void maleRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maleRadioButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_maleRadioButtonActionPerformed
+
+    private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
+        // TODO add your handling code here:
+        nameTF.setText(null);
+        confirmPasswordField.setText(null);
+        emailTF.setText(null);
+        PasswordField.setText(null);
+        contactTF.setText(null);
+        usernameTF.setText(null);
+        jDateChooser1.setCalendar(null);
+    }//GEN-LAST:event_clearButtonActionPerformed
+
+    private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
+        // TODO add your handling code here:
+        String name = nameTF.getText();
+        String username = usernameTF.getText();
+        SimpleDateFormat dFormat= new SimpleDateFormat("MM-DD-YYYY");
+        String startdate = dFormat.format(jDateChooser1.getDate());
+        char[] password = PasswordField.getPassword();
+               
+        
+        nameTF.setText(null);
+        confirmPasswordField.setText(null);
+        emailTF.setText(null);
+        PasswordField.setText(null);
+        contactTF.setText(null);
+        usernameTF.setText(null);
+        jDateChooser1.setCalendar(null);
+    }//GEN-LAST:event_submitButtonActionPerformed
+
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        MainFrame mainFrame= new MainFrame();
+        mainFrame.setVisible(true);
+    }//GEN-LAST:event_backButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -210,16 +350,27 @@ public class RegFrame extends javax.swing.JFrame {
     private javax.swing.JLabel ConfirmPasswordLabel;
     private javax.swing.JLabel DoBLabel;
     private javax.swing.JPasswordField PasswordField;
+    private javax.swing.JButton backButton;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JButton clearButton;
     private javax.swing.JPasswordField confirmPasswordField;
     private javax.swing.JLabel contactLabel;
+    private javax.swing.JTextField contactTF;
     private javax.swing.JLabel createPasswordLabel;
     private javax.swing.JLabel emailLabel;
+    private javax.swing.JTextField emailTF;
+    private javax.swing.JRadioButton femaleRadioButton;
     private javax.swing.JLabel genderLabel;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JRadioButton maleRadioButton;
     private javax.swing.JLabel nameLable;
+    private javax.swing.JTextField nameTF;
     private javax.swing.JLabel regLabel;
     private javax.swing.JButton submitButton;
     private javax.swing.JLabel userNameLabel;
+    private javax.swing.JTextField usernameTF;
     // End of variables declaration//GEN-END:variables
 }
