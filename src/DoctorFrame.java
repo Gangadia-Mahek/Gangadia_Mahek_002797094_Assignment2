@@ -193,19 +193,25 @@ public class DoctorFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_TxtPulseActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-int selectedRow = jTable1.getSelectedRow();
-
-        if (selectedRow < 0) {
-            JOptionPane.showMessageDialog(this, "Please Select a row to Add Vital stats.");
-            return;
-        }
-
-        jButton3.setEnabled(true);
-        Date resultdate = new Date(System.currentTimeMillis());
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-
+        String name = txtBP.getText();
+        String email = txtTemp.getText();
+        String phone = TxtPulse.getText();
+        String address = diag.getText();
         
-        jButton3.setEnabled(false);        // TODO add your handling code here:
+        if (name.isEmpty() || email.isEmpty() || phone.isEmpty() || address.isEmpty()) {
+            JOptionPane.showMessageDialog(this,
+                                    "Please enter all fields",
+                                    "Try again",
+                                    JOptionPane.ERROR_MESSAGE);
+        } else {
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            model.addRow(new Object[]{name, email, phone, address});
+            
+            txtBP.setText("");
+            txtTemp.setText("");
+            TxtPulse.setText("");
+            diag.setText("");
+        }       
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
