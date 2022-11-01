@@ -275,10 +275,6 @@ public class CommunityAdminFrame extends javax.swing.JFrame {
             tfAddress.setText("");
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void searchTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_searchTextFieldActionPerformed
-
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
         dispose();

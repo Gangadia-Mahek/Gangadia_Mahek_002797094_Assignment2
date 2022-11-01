@@ -128,7 +128,7 @@
                       <Component id="BpLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtBP" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="PluseRateLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="TxtPulse" alignment="3" min="-2" max="-2" attributes="0"/>
