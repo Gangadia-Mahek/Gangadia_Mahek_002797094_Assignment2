@@ -25,8 +25,28 @@ public class PatientFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        nameLabel = new javax.swing.JLabel();
+        nameTextField = new javax.swing.JTextField();
+        DobLabel = new javax.swing.JLabel();
+        DobTextField = new javax.swing.JFormattedTextField();
+        GenderLabel = new javax.swing.JLabel();
+        MaleRadioButton = new javax.swing.JRadioButton();
+        FemaleRadioButton = new javax.swing.JRadioButton();
+        ReasonLabel = new javax.swing.JLabel();
+        ResonLabel = new javax.swing.JLabel();
+        ReasonTextField = new javax.swing.JTextField();
+        DoctorLabel = new javax.swing.JLabel();
+        DoctorComboBox = new javax.swing.JComboBox<>();
+        DateLabel = new javax.swing.JLabel();
+        DateTextField = new javax.swing.JFormattedTextField();
+        TimeLabel = new javax.swing.JLabel();
+        TimeTextField = new javax.swing.JFormattedTextField();
+        BookingButton = new javax.swing.JButton();
+        ClearButton = new javax.swing.JButton();
+        BackButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -35,21 +55,159 @@ public class PatientFrame extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setText("Patient ");
 
+        nameLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        nameLabel.setText("Name");
+
+        nameTextField.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+
+        DobLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        DobLabel.setText("Date of Birth");
+
+        DobTextField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+
+        GenderLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        GenderLabel.setText("Gender");
+
+        buttonGroup1.add(MaleRadioButton);
+        MaleRadioButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        MaleRadioButton.setText("Male");
+
+        buttonGroup1.add(FemaleRadioButton);
+        FemaleRadioButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        FemaleRadioButton.setText("Female");
+
+        ReasonLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        ReasonLabel.setText("Reason for Visit");
+
+        ResonLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+
+        ReasonTextField.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+
+        DoctorLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        DoctorLabel.setText("Select Doctor");
+
+        DoctorComboBox.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        DoctorComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<Select>", "Dr. Harsh Patel", "Dr. Sunil Shah", "Dr. Megha Desai" }));
+
+        DateLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        DateLabel.setText("Select Date");
+
+        DateTextField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+
+        TimeLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        TimeLabel.setText("Select Time");
+
+        TimeTextField.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getTimeInstance(java.text.DateFormat.SHORT))));
+
+        BookingButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        BookingButton.setText("Book Appoinment");
+        BookingButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BookingButtonActionPerformed(evt);
+            }
+        });
+
+        ClearButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        ClearButton.setText("Clear");
+        ClearButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ClearButtonActionPerformed(evt);
+            }
+        });
+
+        BackButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        BackButton.setText("Back");
+        BackButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(300, 300, 300)
-                .addComponent(jLabel1)
-                .addContainerGap(300, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(300, 300, 300)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(106, 106, 106)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nameLabel)
+                            .addComponent(DobLabel)
+                            .addComponent(GenderLabel)
+                            .addComponent(ReasonLabel)
+                            .addComponent(DateLabel)
+                            .addComponent(TimeLabel)
+                            .addComponent(BookingButton)
+                            .addComponent(DoctorLabel))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(164, 164, 164)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(MaleRadioButton)
+                                        .addGap(34, 34, 34)
+                                        .addComponent(FemaleRadioButton))
+                                    .addComponent(DobTextField)
+                                    .addComponent(nameTextField)
+                                    .addComponent(ResonLabel)
+                                    .addComponent(ReasonTextField)
+                                    .addComponent(DoctorComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(DateTextField)
+                                    .addComponent(TimeTextField)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ClearButton)
+                                .addGap(96, 96, 96)
+                                .addComponent(BackButton)))))
+                .addContainerGap(142, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(568, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nameLabel)
+                    .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(DobLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(DobTextField))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(GenderLabel)
+                    .addComponent(MaleRadioButton)
+                    .addComponent(FemaleRadioButton))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ReasonLabel)
+                    .addComponent(ResonLabel)
+                    .addComponent(ReasonTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(DoctorLabel)
+                    .addComponent(DoctorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(DateLabel)
+                    .addComponent(DateTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(TimeTextField)
+                        .addGap(1, 1, 1))
+                    .addComponent(TimeLabel))
+                .addGap(106, 106, 106)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BookingButton)
+                    .addComponent(ClearButton)
+                    .addComponent(BackButton))
+                .addGap(104, 104, 104))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -65,6 +223,31 @@ public class PatientFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        MainFrame mainFrame= new MainFrame();
+        mainFrame.setVisible(true);
+    }//GEN-LAST:event_BackButtonActionPerformed
+
+    private void ClearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearButtonActionPerformed
+        // TODO add your handling code here:
+        DobTextField.setText(null);
+        DateTextField.setText(null);
+        ReasonTextField.setText(null);
+        TimeTextField.setText(null);
+        nameTextField.setText(null);
+    }//GEN-LAST:event_ClearButtonActionPerformed
+
+    private void BookingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BookingButtonActionPerformed
+        // TODO add your handling code here:
+        DobTextField.setText(null);
+        DateTextField.setText(null);
+        ReasonTextField.setText(null);
+        TimeTextField.setText(null);
+        nameTextField.setText(null);
+    }//GEN-LAST:event_BookingButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -102,7 +285,27 @@ public class PatientFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BackButton;
+    private javax.swing.JButton BookingButton;
+    private javax.swing.JButton ClearButton;
+    private javax.swing.JLabel DateLabel;
+    private javax.swing.JFormattedTextField DateTextField;
+    private javax.swing.JLabel DobLabel;
+    private javax.swing.JFormattedTextField DobTextField;
+    private javax.swing.JComboBox<String> DoctorComboBox;
+    private javax.swing.JLabel DoctorLabel;
+    private javax.swing.JRadioButton FemaleRadioButton;
+    private javax.swing.JLabel GenderLabel;
+    private javax.swing.JRadioButton MaleRadioButton;
+    private javax.swing.JLabel ReasonLabel;
+    private javax.swing.JTextField ReasonTextField;
+    private javax.swing.JLabel ResonLabel;
+    private javax.swing.JLabel TimeLabel;
+    private javax.swing.JFormattedTextField TimeTextField;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel nameLabel;
+    private javax.swing.JTextField nameTextField;
     // End of variables declaration//GEN-END:variables
 }
