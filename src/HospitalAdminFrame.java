@@ -114,6 +114,11 @@ public class HospitalAdminFrame extends javax.swing.JFrame {
                 BackButtonActionPerformed(evt);
             }
         });
+        BackButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                BackButtonKeyReleased(evt);
+            }
+        });
 
         SearchLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         SearchLabel.setText("Search");
@@ -311,7 +316,11 @@ public class HospitalAdminFrame extends javax.swing.JFrame {
         DesignationTextField.setText(null);
 
     }//GEN-LAST:event_AddButtonActionPerformed
-
+////
+    private void BackButtonKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_BackButtonKeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BackButtonKeyReleased
+///////
     /**
      * @param args the command line arguments
      */
